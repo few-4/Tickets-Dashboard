@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon server.js",
+    "seed": "node src/scripts/seed.js",
+    "build": "npm install && cd ../Frontend && npm install && npm run build && rmdir /s /q ..\\Backend\\src\\public 2>nul || rm -rf ../Backend/src/public && mkdir -p ../Backend/src/public && cp -r dist/* ../Backend/src/public/ || xcopy /e /i /y dist ..\\Backend\\src\\public",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@langchain/core": "^1.1.49",
+    "@langchain/mistralai": "^1.1.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.0",
+    "morgan": "^1.11.0",
+    "nodemon": "^3.1.14",
+    "zod": "^4.4.3"
+  }
+}
