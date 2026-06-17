@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx nodemon server.js",
     "seed": "node src/scripts/seed.js",
-    "build": "npm install && cd ../Frontend && npm install && npm run build && rmdir /s /q ..\\Backend\\src\\public 2>nul || rm -rf ../Backend/src/public && mkdir -p ../Backend/src/public && cp -r dist/* ../Backend/src/public/ || xcopy /e /i /y dist ..\\Backend\\src\\public",
+    "build": "npm install",
     "start": "node server.js"
   },
   "keywords": [],
