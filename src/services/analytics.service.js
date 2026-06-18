@@ -31,5 +31,6 @@ export const escalateTicket = async (ticketId, agentName) => {
   });
 
   await ticket.save();
+  await ticket.populate("customer");
   return ticket;
 };

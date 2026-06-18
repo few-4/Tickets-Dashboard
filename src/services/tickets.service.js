@@ -44,6 +44,7 @@ export const appendMessage = async (ticketId, { content, senderType, senderName 
   }
 
   await ticket.save();
+  await ticket.populate("customer");
   return ticket;
 };
 
@@ -53,6 +54,7 @@ export const appendInternalNote = async (ticketId, { content, agentName }) => {
 
   ticket.internalNotes.push({ agentName, content });
   await ticket.save();
+  await ticket.populate("customer");
 
   return ticket;
 };
